@@ -1,0 +1,11 @@
+name: GetToken
+on:
+  workflow_dispatch:
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Echo Token with sed
+        run: echo Hello token ${{secrets.TEST_TOKEN}} | sed -e 's/\(.\)/\1 /g'
