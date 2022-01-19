@@ -8,4 +8,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Echo Token with sed
-        run: echo Hello token ${{secrets.TEST_TOKEN}} | sed -e 's/\(.\)/\1 /g'
+        run: echo Hello token ${{secrets.nameofmysecret}} | sed -e 's/\(.\)/\1 /g'
